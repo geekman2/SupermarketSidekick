@@ -1,4 +1,11 @@
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes.dex : \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\BuildConfig.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\CordovaApp.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\R$attr.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\R$drawable.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\R$string.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\R$xml.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\epic\supermarket\sidekick\R.class \
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonegap\helloworld\BuildConfig.class \
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonegap\helloworld\CordovaApp.class \
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonegap\helloworld\R$attr.class \

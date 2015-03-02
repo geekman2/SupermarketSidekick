@@ -4,7 +4,7 @@
   <author email="heresthesidekick@gmail.com">Chuck Fulminata</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
-  <preference name="orientation" value="default"/>
+  <preference name="orientation" value="portrait"/>
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="true"/>
   <preference name="webviewbounce" value="true"/>
@@ -36,5 +36,5 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <icon src="Supermarket Sidekick.png"/>
+  <icon src="img/Supermarket Sidekick.png"/>
 </widget>
