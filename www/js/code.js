@@ -41,17 +41,18 @@ function logout(){
     window.location.replace("index.html");
 }
 
-function sync(){
+function syncSidekick(){
     //The sync function checks the location that the user has currently set and
     //then synchronises the local database with the cloud database that match that
     //location
-
-    //var db window.sqlitePlugin.openDatabase({name:store+"-DB",location:1});
-    var db = sqlitePlugin.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-
-    //var docs = httpGet("http://54.183.22.36/big/_design/items/_view/ItemsByDate");
-    var docs = readTextFile("file:///C:/Users/Geekman2/Documents/Github/Phonegap/SupermarketSidekick/www/response.txt");
     var store = "la-crescenta-vons"; //TODO add location setting
+    var dbname = store+"-DB";
+    var db = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+    //var db = sqlitePlugin.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+
+    var docs = httpGet("http://54.183.22.36/big/_design/items/_view/ItemsByDate");
+    //var docs = readTextFile("file:///C:/Users/Geekman2/Documents/Github/Phonegap/SupermarketSidekick/www/response.txt");
+
     var docsj= JSON.parse(docs);
 
     for(var i = 0; i < docsj.rows.length; i++) {

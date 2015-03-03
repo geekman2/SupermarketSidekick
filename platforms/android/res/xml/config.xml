@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.epic.supermarket.sidekick" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
+    <feature name="SQLitePlugin">
+        <param name="android-package" value="org.pgsqlite.SQLitePlugin" />
+    </feature>
     <name>Supermarket Sidekick</name>
     <description>An app that allows you to search items in grocery store aisles.</description>
     <author email="heresthesidekick@gmail.com">Chuck Fulminata</author>

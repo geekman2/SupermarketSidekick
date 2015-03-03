@@ -32,12 +32,14 @@ C:\Workspace\SupermarketSidekick\platforms\android\assets\www\Jquery \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\js \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\login.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\phonegap.js \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\plugins \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\profile.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\res \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\response.txt \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\results.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\spec \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\spec.html \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\Sync.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\css\default.css \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\css\index.css \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\img\logo.png \
@@ -266,6 +268,9 @@ C:\Workspace\SupermarketSidekick\platforms\android\assets\www\Jquery\images\icon
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\js\code.js \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\js\index.js \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\js\jquery.js \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\plugins\com.brodysoft.sqlitePlugin \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\plugins\com.brodysoft.sqlitePlugin\www \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\plugins\com.brodysoft.sqlitePlugin\www\SQLitePlugin.js \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\res\icon \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\res\screen \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\res\icon\android \

@@ -13,4 +13,10 @@ C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonega
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonegap\helloworld\R$string.class \
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonegap\helloworld\R$xml.class \
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\com\phonegap\helloworld\R.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$1.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$Action.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$DBQuery.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$DBRunner.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin$QueryType.class \
+C:\Workspace\SupermarketSidekick\platforms\android\ant-build\classes\org\pgsqlite\SQLitePlugin.class \
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\dexedLibs\classes-a1723494f921a5c406d30279754f01b9.jar \
