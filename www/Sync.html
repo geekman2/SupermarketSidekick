@@ -5,22 +5,29 @@
     <title>Home</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/default.css"> -->
     <link rel="stylesheet" type="text/css" href="Jquery/jquery.mobile-1.4.5.css">
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="Jquery/jquery.mobile-1.4.5.js" type="text/javascript"></script>
-    <script src="Jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script> -->
 </head>
-<body onload="usernamefill()">
+<body onload="onLoad()">
     <div data-role="page" data-theme="b" id="page" >
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="Jquery/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+        <script src="Jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script src="js/code.js" type="text/javascript"></script>
         <script src="plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js" type="text/javascript"></script>
         <script type="text/javascript">
-        function onClick(){
+        $( document ).ready(function() {
+            console.log( "ready!" );
             document.addEventListener("deviceready", onDeviceReady(), false);
+        });
+        usernamefill();
+
+        function onClick(){
+           var resp = httpGet('http://www.google.com');
+                alert(resp);
         }
         function onDeviceReady(){
-            getBuffer();
+            console.log("All systems Go")
         }
     </script>
         <div data-role="header" id="taskbar" data-theme="b">

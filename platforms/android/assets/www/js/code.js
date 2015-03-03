@@ -47,7 +47,7 @@ function syncSidekick(){
     //location
     var store = "la-crescenta-vons"; //TODO add location setting
     var dbname = store+"-DB";
-    var db = window.sqlitePlugin.openDatabase({name: "my.db", location: 1});
+    var db = window.sqlitePlugin.openDatabase({name: dbname, location: 1});
     //var db = sqlitePlugin.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 
     var docs = httpGet("http://54.183.22.36/big/_design/items/_view/ItemsByDate");
@@ -75,9 +75,12 @@ function additem(){
 function itemvalidate(){
     //TODO validate items to make sure they don't have illegal characters, etc
     }
-function httpGetLocal(){
-    var repo = $.get('http://www.google.com',{},function(){
-        alert("the problem was data")});
+function httpGet(){
+    var repo = $.get('http://www.google.com',function(data){
+        console.log(data);
+        alert("Passed Data")
+        return data;
+    })
 }
 
 function readTextFile(file)
@@ -89,7 +92,3 @@ function readTextFile(file)
     return allText;
 
 }
-
-function getBuffer(){
-    httpGetLocal();
-    }

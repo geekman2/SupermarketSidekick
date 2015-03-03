@@ -75,9 +75,12 @@ function additem(){
 function itemvalidate(){
     //TODO validate items to make sure they don't have illegal characters, etc
     }
-function httpGetLocal(){
-    var repo = $.get('http://www.google.com',{},function(){
-        alert("the problem was data")});
+function httpGet(){
+    var repo = $.get('http://www.google.com',function(data){
+        console.log(data);
+        alert("Passed Data")
+        return data;
+    })
 }
 
 function readTextFile(file)
@@ -89,7 +92,3 @@ function readTextFile(file)
     return allText;
 
 }
-
-function getBuffer(){
-    httpGetLocal();
-    }
