@@ -3,42 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Home</title>
-    <!-- <link rel="stylesheet" type="text/css" href="css/default.css"> -->
-    <link rel="stylesheet" type="text/css" href="Jquery/jquery.mobile-1.4.5.css">
-    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script> -->
-</head>
-<body onload="onLoad()">
-    <div data-role="page" data-theme="b" id="page" >
-        <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="Jquery/jquery.mobile-1.4.5.js" type="text/javascript"></script>
-        <script src="Jquery/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        <script src="js/code.js" type="text/javascript"></script>
-        <script src="plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js" type="text/javascript"></script>
-        <script type="text/javascript">
-        function onLoad(){
-            $( document ).ready(function() {
-                console.log( "ready!" );
-                document.addEventListener("deviceready", onDeviceReady(), false);
-            });
-            usernamefill();
-        }
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/zepto.js" type="text/javascript"></script>
+    <script src="js/DBmanager.js" type="text/javascript"></script>
+    <script src="js/code.js" type="text/javascript"></script>
+    <script src="plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js" type="text/javascript"></script>
+    <script type="text/javascript">
         function onClick(){
-           var resp = httpGet('http://www.google.com');
-                alert(resp);
+        document.addEventListener("deviceready", onDeviceReady(), false);
         }
         function onDeviceReady(){
-            console.log("All systems Go")
+        syncSidekick('http://54.183.22.36/small/_design/items/_view/ItemsByDate');
         }
     </script>
-        <div data-role="header" id="taskbar" data-theme="b">
-            <a data-role="button" data-theme="c" data-icon="home" href="index.html">Home</a>
-            <h1>Sync</h1>
-            <a id="username" class="toolbar_item" data-role="button" data-theme="c" href="#"></a>
-        </div>
-        <div data-role="content" data-theme="b" id="content">
-            <button onclick="onClick()" class="resultitem">Sync</button>
-        </div>
+</head>
+<body onload="usernamefill()">
+    <div id="taskbar">
+        <a href="index.html">Home</a>
+        <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
+    </div>
+    <div id="content">
+        <button onclick="onClick()" class="resultitem">Sync</button>
     </div>
 
 </body>

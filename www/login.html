@@ -10,20 +10,14 @@
 <body>
     <div id="page">
         <div id="taskbar">
-           <div id="logo">
-                <a href="index.html"> <img src="img/Sidekick.png" alt="My image" /></a>
-            </div>
-            <div id="buttons">
-                 <a id="username" class="toolbar_item" href="#"></a>
-            </div>
-        </div>
+        <button href="index.html">Home</button>
+        <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
+    </div>
         <div id="content">
-            <div id="field">
+            <div class="form">
                 <form>
                 <input id="usernamefield" placeholder="Username" onsubmit="login()">
-                    <div id="submitbutton">
-                        <button id="submit" type="submit" onclick="login()">Login</button>
-                    </div>
+                <button id="submit" type="submit" onclick="login()">Login</button>
                  </form>
                 </div>
             </div>
