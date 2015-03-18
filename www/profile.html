@@ -7,45 +7,41 @@
     <script type="text/javascript" src="js/code.js"></script>
 </head>
 <body onload="profilefiller()">
-    <div id="page">
-        <div id="taskbar">
-           <div id="logo">
-                <a href="index.html"> <img src="img/Sidekick.png" alt="My image" /></a>
-            </div>
-            <div id="buttons">
-                 <a id="username" class="toolbar_item" href="#"></a>
-            </div>
-        </div>
-        <div id="content">
-            <div id="top_part">
-                <div class="top_block" id="rank">
-                    <div class="numlabel">
-                        Rank
-                    </div>
-                    <div class="bignum" id="ranknum">
-
-                    </div>
-                </div>
-                <div class="top_block" id="points">
-                    <div class="numlabel">
-                        Points
-                    </div>
-                    <div class="bignum" id="pointval">
-
-                    </div>
-                </div>
-            </div>
-            <div class="mid_block" id="competitor">
-                    <div class="numlabel">
-                        Points to next rank
-                    </div>
-                    <div class="bignum" id="compscore">
-
-                    </div>
-                </div>
-            <button id="logout" onclick="logout()">Logout</button>
-        </div>
+    <div id="taskbar">
+        <a href="index.html">Home</a>
+        <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
     </div>
+
+    <div id="content">
+        <div id="top_part">
+            <div class="top_block" id="rank">
+                <div class="numlabel">
+                    Rank
+                </div>
+                <div class="bignum" id="ranknum">
+
+                </div>
+            </div>
+            <div class="top_block" id="points">
+                <div class="numlabel">
+                    Points
+                </div>
+                <div class="bignum" id="pointval">
+
+                </div>
+            </div>
+        </div>
+        <div class="top_block" id="competitor">
+                <div class="numlabel">
+                    Points to next rank
+                </div>
+                <div class="bignum" id="compscore">
+
+                </div>
+            </div>
+        <button id="logout" onclick="logout()">Logout</button>
+    </div>
+
 
 </body>
 </html>

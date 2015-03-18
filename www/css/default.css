@@ -6,12 +6,13 @@ body {
 button,a{
     float:left;
     background-color:#000099;
-    color:white;
+    border-radius:5px;
     display:block;
     padding:2vh 5vw;
-    border:none;
     text-decoration:none;
     font-size:2vh;
+    color:white;
+    border: 1px solid rgba(255, 255, 255, .3);
     }
 input{
     background-color:#33343B;
@@ -20,7 +21,7 @@ input{
     font-size:7vw;
     border:none;
     width:80vw;
-
+    color:white;
     }
 h1{
     float:center;
@@ -28,6 +29,14 @@ h1{
     color:white;
     text-align:center;
     }
+.resultItem{
+    background-color:gray;
+    color:white;
+    border:1px white;
+    padding:10px;
+    margin:5px;
+    }
+
 div.form{
     width:80vw;
     padding:20vh 8vw;
@@ -38,11 +47,29 @@ div.form{
 #taskbar{
      background-color: #191970;
      border:none;
-     height:7vh;
+     height:8vh;
      position:relative;
      text-align:center;
      }
 #go{
     margin-left:auto;
     text-align:center;
+    }
+#syncButton{
+    float:bottom;
+    width:100vw;
+    background-color:gray;
+    position:absolute;
+    bottom:1px;
+    border:none;
+    }
+.top_block{
+    color:white;
+    display:block;
+    width:85vw;
+    font-size:10vw;
+    background-color:gray;
+    margin:10px;
+    border-radius:5px;
+    padding:5px;
     }

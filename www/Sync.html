@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script src="js/zepto.js" type="text/javascript"></script>
-    <script src="js/DBmanager.js" type="text/javascript"></script>
     <script src="js/code.js" type="text/javascript"></script>
     <script src="plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -14,17 +13,21 @@
         document.addEventListener("deviceready", onDeviceReady(), false);
         }
         function onDeviceReady(){
-        syncSidekick('http://54.183.22.36/small/_design/items/_view/ItemsByDate');
+        var username = localStorage.getItem('username');
+        var baseurl = 'http://54.183.22.36';
+        var dburl = baseurl+'/items_la-crescenta_vons/_design/items/_view/ItemsByDate';
+        var usrl = baseurl+'/users/app.user:'+username;
+        syncSidekick(dburl);
         }
     </script>
 </head>
-<body onload="usernamefill()">
+<body>
     <div id="taskbar">
         <a href="index.html">Home</a>
         <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
     </div>
     <div id="content">
-        <button onclick="onClick()" class="resultitem">Sync</button>
+        <button onclick="onClick()" class="resultitem" style="width:100vw; height:80vh; background-color:red;">Sync</button>
     </div>
 
 </body>

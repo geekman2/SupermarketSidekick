@@ -21,6 +21,8 @@
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="2000" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
@@ -42,5 +44,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-    <icon src="img/Supermarket Sidekick.png" />
+    <icon src="www/img/Supermarket Sidekick.png" />
+    <splash density="mdpi" src="www/res/screen/screen.png" />
+    <splash density="xdpi" src="www/res/screen/screen.png" />
+    <splash density="hdpi" src="www/res/screen/screen.png" />
 </widget>
