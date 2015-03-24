@@ -1,7 +1,7 @@
 Lawnchair.adapter('webkit-sqlite', (function () {
     // private methods 
     var fail = function (e, i) { console.log('error in sqlite adaptor!', e, i) }
-    ,   now  = function () { return new Date() } // FIXME need to use better date fn
+    ,   now  = function () { return new Date() }; // FIXME need to use better date fn
 	// not entirely sure if this is needed...
     if (!Function.prototype.bind) {
         Function.prototype.bind = function( obj ) {
@@ -11,9 +11,9 @@ Lawnchair.adapter('webkit-sqlite', (function () {
             ,   nop   = function () {} 
             ,   bound = function () {
                     return self.apply(this instanceof nop ? this : (obj || {}), args.concat(slice.call(arguments))) 
-                }
-            nop.prototype   = self.prototype
-            bound.prototype = new nop()
+                };
+            nop.prototype   = self.prototype;
+            bound.prototype = new nop();
             return bound
         }
     }
@@ -29,9 +29,9 @@ Lawnchair.adapter('webkit-sqlite', (function () {
             ,   dbname = options.db || this.name
             ,   bgType = options.bgType || 1
             ,   create = "CREATE TABLE IF NOT EXISTS " + this.name + " (id NVARCHAR(32) UNIQUE PRIMARY KEY, value TEXT, timestamp REAL)"
-            ,   win    = function(){ return cb.call(that, that); }
+            ,   win    = function(){ return cb.call(that, that); };
             // open a connection and create the db if it doesn't exist 
-            this.db = sqlitePlugin.openDatabase({name:dbname,bgType:bgType})
+            this.db = sqlitePlugin.openDatabase({name:dbname,bgType:bgType});
             this.db.transaction(function (t) { 
                 t.executeSql(create, [], win, fail) 
             })
@@ -40,7 +40,7 @@ Lawnchair.adapter('webkit-sqlite', (function () {
         keys:  function (callback) {
             var cb   = this.lambda(callback)
             ,   that = this
-            ,   keys = "SELECT id FROM " + this.name + " ORDER BY timestamp DESC"
+            ,   keys = "SELECT id FROM " + this.name + " ORDER BY timestamp DESC";
 
             this.db.transaction(function(t) {
                 var win = function (xxx, results) {
@@ -53,9 +53,9 @@ Lawnchair.adapter('webkit-sqlite', (function () {
                         }
                         cb.call(that, r)
                     }
-                }
+                };
                 t.executeSql(keys, [], win, fail)
-            })
+            });
             return this
         },
         // you think thats air you're breathing now?
@@ -65,22 +65,22 @@ Lawnchair.adapter('webkit-sqlite', (function () {
             ,   ins  = "INSERT INTO " + this.name + " (value, timestamp, id) VALUES (?,?,?)"
             ,   up   = "UPDATE " + this.name + " SET value=?, timestamp=? WHERE id=?"
             ,   win  = function () { if (callback) { obj.key = id; that.lambda(callback).call(that, obj) }}
-            ,   val  = [now(), id]
+            ,   val  = [now(), id];
 			// existential 
             that.exists(obj.key, function(exists) {
                 // transactions are like condoms
                 that.db.transaction(function(t) {
 					// TODO move timestamp to a plugin
                     var insert = function (obj) {
-                        val.unshift(JSON.stringify(obj))
+                        val.unshift(JSON.stringify(obj));
                         t.executeSql(ins, val, win, fail)
-                    }
+                    };
 					// TODO move timestamp to a plugin
                     var update = function (obj) {
-                        delete(obj.key)
-                        val.unshift(JSON.stringify(obj))
+                        delete(obj.key);
+                        val.unshift(JSON.stringify(obj));
                         t.executeSql(up, val, win, fail)
-                    }
+                    };
 					// pretty
                     exists ? update(obj) : insert(obj)
                 })
@@ -93,19 +93,19 @@ Lawnchair.adapter('webkit-sqlite', (function () {
 			
 			var results = []
 			,   done = false
-			,   that = this
+			,   that = this;
 
 			var updateProgress = function(obj) {
-				results.push(obj)
+				results.push(obj);
 				done = results.length === objs.length
-			}
+			};
 
 			var checkProgress = setInterval(function() {
 				if (done) {
-					if (cb) that.lambda(cb).call(that, results)
+					if (cb) that.lambda(cb).call(that, results);
 					clearInterval(checkProgress)
 				}
-			}, 200)
+			}, 200);
 
 			for (var i = 0, l = objs.length; i < l; i++) 
 				this.save(objs[i], updateProgress)
@@ -115,7 +115,7 @@ Lawnchair.adapter('webkit-sqlite', (function () {
 
         get: function (keyOrArray, cb) {
 			var that = this
-			,   sql  = ''
+			,   sql  = '';
             // batch selects support
 			if (this.isArray(keyOrArray)) {
 				sql = 'SELECT id, value FROM ' + this.name + " WHERE id IN ('" + keyOrArray.join("','") + "')"
@@ -127,26 +127,26 @@ Lawnchair.adapter('webkit-sqlite', (function () {
 			// in other words, this could be faster
 			var win = function (xxx, results) {
 				var o = null
-				,   r = []
+				,   r = [];
 				if (results.rows.length) {
 					for (var i = 0, l = results.rows.length; i < l; i++) {
-						o = JSON.parse(results.rows.item(i).value)
-						o.key = results.rows.item(i).id
+						o = JSON.parse(results.rows.item(i).value);
+						o.key = results.rows.item(i).id;
 						r.push(o)
 					}
 				}
-				if (!that.isArray(keyOrArray)) r = r.length ? r[0] : null
+				if (!that.isArray(keyOrArray)) r = r.length ? r[0] : null;
 				if (cb) that.lambda(cb).call(that, r)
-            }
-            this.db.transaction(function(t){ t.executeSql(sql, [], win, fail) })
+            };
+            this.db.transaction(function(t){ t.executeSql(sql, [], win, fail) });
             return this 
 		},
 
 		exists: function (key, cb) {
 			var is = "SELECT * FROM " + this.name + " WHERE id = ?"
 			,   that = this
-			,   win = function(xxx, results) { if (cb) that.fn('exists', cb).call(that, (results.rows.length > 0)) }
-			this.db.transaction(function(t){ t.executeSql(is, [key], win, fail) })
+			,   win = function(xxx, results) { if (cb) that.fn('exists', cb).call(that, (results.rows.length > 0)) };
+			this.db.transaction(function(t){ t.executeSql(is, [key], win, fail) });
 			return this
 		},
 
@@ -158,17 +158,17 @@ Lawnchair.adapter('webkit-sqlite', (function () {
 			,   win  = function (xxx, results) {
 				if (results.rows.length != 0) {
 					for (var i = 0, l = results.rows.length; i < l; i++) {
-						var obj = JSON.parse(results.rows.item(i).value)
-						obj.key = results.rows.item(i).id
+						var obj = JSON.parse(results.rows.item(i).value);
+						obj.key = results.rows.item(i).id;
 						r.push(obj)
 					}
 				}
 				if (cb) cb.call(that, r)
-			}
+			};
 
 			this.db.transaction(function (t) { 
 				t.executeSql(all, [], win, fail) 
-			})
+			});
 			return this
 		},
 
@@ -176,7 +176,7 @@ Lawnchair.adapter('webkit-sqlite', (function () {
 			var that = this
 			,   key  = typeof keyOrObj === 'string' ? keyOrObj : keyOrObj.key
 			,   del  = "DELETE FROM " + this.name + " WHERE id = ?"
-			,   win  = function () { if (cb) that.lambda(cb).call(that) }
+			,   win  = function () { if (cb) that.lambda(cb).call(that) };
 
 			this.db.transaction( function (t) {
 				t.executeSql(del, [key], win, fail);
@@ -188,11 +188,11 @@ Lawnchair.adapter('webkit-sqlite', (function () {
 		nuke: function (cb) {
 			var nuke = "DELETE FROM " + this.name
 			,   that = this
-			,   win  = cb ? function() { that.lambda(cb).call(that) } : function(){}
+			,   win  = cb ? function() { that.lambda(cb).call(that) } : function(){};
 				this.db.transaction(function (t) { 
 				t.executeSql(nuke, [], win, fail) 
-			})
+			});
 			return this
 		}
 //////
-}})())
+}})());

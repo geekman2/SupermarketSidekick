@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -16,14 +17,19 @@
         function onDeviceReady(){
         var baseurl = 'http://54.183.22.36';
         var dburl = baseurl+'/items_la-crescenta_vons/_design/items/_view/ItemsByDate';
+        //var dburl = baseurl+'/big/_design/items/_view/ItemsByDate'
         syncSidekick(dburl);
+        var syncButton = document.getElementById('syncButton');
+        syncButton.innerHTML = "Sync In Progress,Please Wait...";
+        syncButton.style.background = "rgba(225, 207, 0, 0.66)";
         }
     </script>
 </head>
 
 <body onload="onLoad()">
     <div id="taskbar">
-        <button href="index.html">Home</button>
+        <a href="index.html">Home</a>
+        <a id="settings" class="toolbar_item" href="settings.html" style="float: right; padding:4px 12px; font-size:4vh;">:</a>
         <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
     </div>
     <div id="content">
@@ -33,6 +39,7 @@
         </div>
 
     </div>
-    <button onclick="onDeviceReady()" id="syncButton">Manual Sync</button>
+    <a href="add.html">Add Item</a>
+    <button onclick="onDeviceReady()" id="syncButton"></button>
 </body>
 </html>

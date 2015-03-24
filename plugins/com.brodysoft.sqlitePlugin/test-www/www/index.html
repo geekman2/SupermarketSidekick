@@ -398,9 +398,8 @@
             start();
             func(db);
           });
-        };
-
-        // XXX (Uncaught) Error is reported in the case of Web SQL, needs investigation!
+        }
+          // XXX (Uncaught) Error is reported in the case of Web SQL, needs investigation!
         if (!isWebSql) test(suiteName + "transaction encompasses all callbacks", function() {
           stop();
           var db = openDatabase("tx-all-callbacks.db", "1.0", "Demo", DEFAULT_SIZE);
@@ -1121,7 +1120,7 @@
           var okcb = function(res) {
             if (i > 1) {
               ok(false, "unexpected result: " + JSON.stringify(res));
-              console.log("discarding unexpected result: " + JSON.stringify(res))
+              console.log("discarding unexpected result: " + JSON.stringify(res));
               return;
             }
 

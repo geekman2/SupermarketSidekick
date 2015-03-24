@@ -1,12 +1,12 @@
 body {
     text-align: center;
     background-color: #000000;
+    color:white;
       }
 
 button,a{
     float:left;
     background-color:#000099;
-    border-radius:5px;
     display:block;
     padding:2vh 5vw;
     text-decoration:none;
@@ -22,9 +22,9 @@ input{
     border:none;
     width:80vw;
     color:white;
+    margin-top:10px;
     }
 h1{
-    float:center;
     font-size:3vh;
     color:white;
     text-align:center;
@@ -37,12 +37,16 @@ h1{
     margin:5px;
     }
 
+.adjacentButton{
+    width:48%;
+}
+
 div.form{
     width:80vw;
     padding:20vh 8vw;
     }
-#content{
-
+#page{
+    height:150vh;
     }
 #taskbar{
      background-color: #191970;
@@ -58,10 +62,11 @@ div.form{
 #syncButton{
     float:bottom;
     width:100vw;
-    background-color:gray;
+    background-color: #000000;
     position:absolute;
     bottom:1px;
     border:none;
+    font-weight: bold;
     }
 .top_block{
     color:white;

@@ -11,7 +11,7 @@ C:\Workspace\SupermarketSidekick\platforms\android\ant-build\res\drawable-hdpi\s
 C:\Workspace\SupermarketSidekick\platforms\android\ant-build\res\drawable-mdpi\screen.png \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\_where-is-www.txt \
-C:\Workspace\SupermarketSidekick\platforms\android\assets\www\base.html \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\add.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\cordova.js \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\cordova_plugins.js \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\css \
@@ -26,11 +26,11 @@ C:\Workspace\SupermarketSidekick\platforms\android\assets\www\profile.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\res \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\response.txt \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\results.html \
+C:\Workspace\SupermarketSidekick\platforms\android\assets\www\settings.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\spec \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\spec.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\Sync.html \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\css\default.css \
-C:\Workspace\SupermarketSidekick\platforms\android\assets\www\css\index.css \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\img\logo.png \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\img\Sidekick.png \
 C:\Workspace\SupermarketSidekick\platforms\android\assets\www\js\code.js \

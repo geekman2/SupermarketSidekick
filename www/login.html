@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -15,6 +16,11 @@
         function onDeviceReady(){
             login();
         }
+        function nevermind(){
+            document.querySelector("#usernamefield").value = "";
+            document.querySelector("#confirm").style.visibility="hidden";
+
+        }
     </script>
 <body>
     <div id="taskbar">
@@ -22,8 +28,17 @@
         <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
     </div>
         <div id="content">
-                <input id="usernamefield" placeholder="Username" >
+            <div class="form" id="login">
+                <input id="usernamefield" placeholder="Username" onsubmit="login()">
                 <button id="submit" onclick="login()">Login</button>
+            </div>
+            <div id="confirm" style="visibility: hidden; color: #ffffff">
+                There is no registered user by that name, would you like to register it?
+                <div>
+                    <button class="adjacentButton" onclick="nevermind()" style="background-color: red; margin-right: 4%">No</button>
+                    <button class="adjacentButton" onclick="createUser()" style="background-color: green; ">Yes</button>
+                </div>
+            </div>
         </div>
 
 </body>

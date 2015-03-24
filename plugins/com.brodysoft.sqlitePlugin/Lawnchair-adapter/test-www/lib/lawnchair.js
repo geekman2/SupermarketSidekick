@@ -9,7 +9,7 @@ var Lawnchair = function (options, callback) {
     if (!(this instanceof Lawnchair)) return new Lawnchair(options, callback);
 
     // lawnchair requires json 
-    if (!JSON) throw 'JSON unavailable! Include http://www.json.org/json2.js to fix.'
+    if (!JSON) throw 'JSON unavailable! Include http://www.json.org/json2.js to fix.';
     // options are optional; callback is not
     if (arguments.length <= 2 && arguments.length > 0) {
         callback = (typeof arguments[0] === 'function') ? arguments[0] : arguments[1];
@@ -21,11 +21,11 @@ var Lawnchair = function (options, callback) {
     if (typeof callback !== 'function') throw 'No callback was provided';
     
     // default configuration 
-    this.record = options.record || 'record'  // default for records
-    this.name   = options.name   || 'records' // default name for underlying store
+    this.record = options.record || 'record';  // default for records
+    this.name   = options.name   || 'records'; // default name for underlying store
     
     // mixin first valid  adapter
-    var adapter
+    var adapter;
     // if the adapter is passed in we try to load that only
     if (options.adapter) {
         for (var i = 0, l = Lawnchair.adapters.length; i < l; i++) {
@@ -38,13 +38,13 @@ var Lawnchair = function (options, callback) {
     } 
     else {
         for (var i = 0, l = Lawnchair.adapters.length; i < l; i++) {
-            adapter = Lawnchair.adapters[i].valid() ? Lawnchair.adapters[i] : undefined
+            adapter = Lawnchair.adapters[i].valid() ? Lawnchair.adapters[i] : undefined;
             if (adapter) break 
         }
     } 
     
     // we have failed 
-    if (!adapter) throw 'No valid adapter.' 
+    if (!adapter) throw 'No valid adapter.';
     
     // yay! mixin the adapter 
     for (var j in adapter)  
@@ -56,9 +56,9 @@ var Lawnchair = function (options, callback) {
 
     // init the adapter 
     this.init(options, callback)
-}
+};
 
-Lawnchair.adapters = [] 
+Lawnchair.adapters = [];
 
 /** 
  * queues an adapter for mixin
@@ -69,10 +69,10 @@ Lawnchair.adapters = []
 Lawnchair.adapter = function (id, obj) {
     // add the adapter id to the adapter obj
     // ugly here for a  cleaner dsl for implementing adapters
-    obj['adapter'] = id
+    obj['adapter'] = id;
     // methods required to implement a lawnchair adapter 
     var implementing = 'adapter valid init keys save batch get exists all remove nuke'.split(' ')
-    ,   indexOf = this.prototype.indexOf
+    ,   indexOf = this.prototype.indexOf;
     // mix in the adapter   
     for (var i in obj) {
         if (indexOf(implementing, i) === -1) throw 'Invalid adapter! Nonstandard method: ' + i
@@ -80,9 +80,9 @@ Lawnchair.adapter = function (id, obj) {
     // if we made it this far the adapter interface is valid 
 	// insert the new adapter as the preferred adapter
 	Lawnchair.adapters.splice(0,0,obj)
-}
+};
 
-Lawnchair.plugins = []
+Lawnchair.plugins = [];
 
 /**
  * generic shallow extension for plugins
@@ -93,7 +93,7 @@ Lawnchair.plugins = []
 Lawnchair.plugin = function (obj) {
     for (var i in obj) 
         i === 'init' ? Lawnchair.plugins.push(obj[i]) : this.prototype[i] = obj[i]
-}
+};
 
 /**
  * helpers
@@ -108,8 +108,8 @@ Lawnchair.prototype = {
      * http://www.flickr.com/photos/westcoastlogic/5955365742/in/photostream
      */
     indexOf: function(ary, item, i, l) {
-        if (ary.indexOf) return ary.indexOf(item)
-        for (i = 0, l = ary.length; i < l; i++) if (ary[i] === item) return i
+        if (ary.indexOf) return ary.indexOf(item);
+        for (i = 0, l = ary.length; i < l; i++) if (ary[i] === item) return i;
         return -1
     },
 
@@ -128,13 +128,13 @@ Lawnchair.prototype = {
     uuid: function () {
         var S4 = function () {
             return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-        }
+        };
         return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
     },
 
     // a classic iterator
     each: function (callback) {
-        var cb = this.lambda(callback)
+        var cb = this.lambda(callback);
         // iterate from chain
         if (this.__results) {
             for (var i = 0, l = this.__results.length; i < l; i++) cb.call(this, this.__results[i], i) 
