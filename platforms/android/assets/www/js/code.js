@@ -57,7 +57,7 @@ function createUser(){
         url: "http://54.183.22.36/users/app.user:" + username,
         contentType: "application/json",
         data: JSON.stringify({"name":username,"points":"0"}),
-        success: function (response) {
+        success: function () {
             console.log("User Created!");
             localStorage.setItem("username",username);
             window.location.assign("index.html");
@@ -167,7 +167,7 @@ function addCallback(uuid,submitString){
         url: putURL + uuid.toString(),
         contentType: "application/json",
         data: JSON.stringify({"aisle": aisle, "author": username, "item": itemvalidate(submitString),"timestamp":Date.now()}),
-        success: function (response) {
+        success: function () {
             console.log("Success!");
             window.location.assign("index.html");
         }
@@ -257,12 +257,6 @@ function initiateSuccessCB() {
     console.log("Database Initialized");
 }
 
-
-// Transaction success callback
-//
-function successCB() {
-    console.log("Database Initialized");
-}
 
 function addSuccessCB(num,len) {
     console.log("Item Added");
