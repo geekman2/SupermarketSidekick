@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e106c8-379e-4664-aa7d-ff71fb7f6463" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Supermarket Sidekick.iws" />
@@ -495,7 +494,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427476761906</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Corrected Config.xml&#10;">
+      <created>1427745897352</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1427745897352</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -572,7 +577,8 @@
     <MESSAGE value="Sync fully functional, speed untested" />
     <MESSAGE value="Sync fully functional, Login Fully functional, 1200% speed increase" />
     <MESSAGE value="First release ready version" />
-    <option name="LAST_COMMIT_MESSAGE" value="First release ready version" />
+    <MESSAGE value="Corrected Config.xml&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected Config.xml&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
