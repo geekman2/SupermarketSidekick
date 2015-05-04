@@ -1,7 +1,7 @@
 function usernamefill() {
     var username = localStorage.getItem("username");
     var userbutton = document.getElementById("username");
-    if (username == "none") {
+    if (username == "none"||username=="") {
         userbutton.innerHTML = "Login";
         userbutton.setAttribute('href', 'login.html');
     }
@@ -11,12 +11,11 @@ function usernamefill() {
     }
 }
 function profilefiller() {
-    //TODO obtain values from "users" database
     //TODO allow the user to set location
     usernamefill();
-    document.getElementById("ranknum").innerHTML = "1";
+    document.getElementById("ranknum").innerHTML = localStorage.getItem('rank');
     document.getElementById("pointval").innerHTML = localStorage.getItem('points');
-    document.getElementById("compscore").innerHTML = "America";
+    document.getElementById("compscore").innerHTML = parseInt(localStorage.getItem('compScore'))-parseInt(localStorage.getItem('points'));
 }
 
 
@@ -100,11 +99,26 @@ function syncSidekick(url1) {
             type: 'PUT',
             url: putURL,
             contentType: "application/json",
-            data: JSON.stringify({"_rev": rev, "name": username, "points": points}),
+            data: JSON.stringify({"_rev": rev, "name": username, "points": parseInt(points)}),
             success: function (response) {
                 var prs = JSON.parse(response);
                 localStorage.setItem('rev', prs.rev);
 
+            }
+        }
+    )
+
+    $.ajax({
+            async:true,
+            type:'GET',
+            url:"http://54.183.22.36/users/_design/users/_view/UsersByPoints",
+            data:{startkey:parseInt(points)},
+            success:function(response){
+                var res = JSON.parse(response);
+                var len = res.rows.length;
+                var compScore = res.rows[1].key;
+                localStorage.setItem("rank",len);
+                localStorage.setItem("compScore",compScore)
             }
         }
     )
