@@ -137,6 +137,7 @@ function syncCallback(response) {
     }
     catch(err){
         alert(err);
+
         var syncButton = document.getElementById('syncButton');
         syncButton.innerHTML = "Sync Failed, Touch to Retry Manually";
         syncButton.style.background = "red";
