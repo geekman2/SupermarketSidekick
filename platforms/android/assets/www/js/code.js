@@ -117,7 +117,7 @@ function syncSidekick(url1) {
                 var res = JSON.parse(response);
                 var len = res.rows.length;
                 var compScore = res.rows[1].key;
-                localStorage.setItem("rank",len);
+                localStorage.setItem("rank",len`);
                 localStorage.setItem("compScore",compScore)
             }
         }
