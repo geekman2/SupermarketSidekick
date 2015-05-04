@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>Results</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <!--suppress HtmlUnknownTarget -->
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/zepto.js" type="text/javascript"></script>
+    <script src="js/code.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            usernamefill();
+            document.addEventListener('deviceready', onDeviceReady, false);
+        }, 100);
+
+        function onDeviceReady(){
+            displayResults();
+        }
+    </script>
+
+</head>
+<body>
+    <script src="plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js" type="text/javascript"></script>
+    <div id="taskbar">
+        <a href="index.html">Home</a>
+        <a id="username" class="toolbar_item" style="float:right;" href="#"></a>
+    </div>
+    <div id="placeholder" class="resultItem">Wow it's dark in here</div>
+
+
+
+</body>
+</html>
