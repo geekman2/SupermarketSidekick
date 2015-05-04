@@ -1,7 +1,8 @@
 function usernamefill() {
     var username = localStorage.getItem("username");
     var userbutton = document.getElementById("username");
-    if (username == "none"||username=="") {
+    console.log("Username:"+username);
+    if (username == "none"||username==null) {
         userbutton.innerHTML = "Login";
         userbutton.setAttribute('href', 'login.html');
     }

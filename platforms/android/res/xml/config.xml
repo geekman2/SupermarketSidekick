@@ -8,7 +8,6 @@
     <feature name="SQLitePlugin">
         <param name="android-package" value="io.liteglue.SQLitePlugin" />
     </feature>
-    <allow-intent href="market:*" />
     <name>SupermarketSidekick</name>
     <description>
         An app that allows you to search grocery store aisles
