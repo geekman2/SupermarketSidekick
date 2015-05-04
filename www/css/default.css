@@ -8,11 +8,12 @@ button,a{
     float:left;
     background-color:#000099;
     display:block;
-    padding:2vh 5vw;
+    padding:2% 5%;
     text-decoration:none;
-    font-size:2vh;
+    font-size:100%;
     color:white;
     border: 1px solid rgba(255, 255, 255, .3);
+    border-radius:4px;
     }
 input{
     background-color:#33343B;
@@ -51,16 +52,14 @@ div.form{
 #taskbar{
      background-color: #191970;
      border:none;
-     height:8vh;
+     overflow:hidden;
      position:relative;
-     text-align:center;
      }
 #go{
     margin-left:auto;
     text-align:center;
     }
 #syncButton{
-    float:bottom;
     width:100vw;
     background-color: #000000;
     position:absolute;
