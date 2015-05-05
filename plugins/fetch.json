@@ -10,8 +10,10 @@
     "io.litehelpers.cordova.sqlite": {
         "source": {
             "type": "git",
-            "url": "https://github.com/litehelpers/cordova-sqlite-storage",
+            "url": "https://github.com/brodysoft/Cordova-SQLitePlugin",
             "subdir": "."
-        }
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
