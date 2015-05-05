@@ -136,6 +136,9 @@ function syncCallback(response) {
         var db = window.sqlitePlugin.openDatabase({name: dbname, location: 1});
     }
     catch(err){
+        alert("error");
+        alert(err);
+
         var syncButton = document.getElementById('syncButton');
         syncButton.innerHTML = "Sync Failed, Touch to Retry Manually";
         syncButton.style.background = "red";
