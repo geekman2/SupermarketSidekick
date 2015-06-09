@@ -8,8 +8,9 @@
         Fulminata Tech
     </author>
     <content src="index.html" />
+    <preference name="permissions" value="none"/>
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.4" />
+    <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.6" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
